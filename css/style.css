@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222222;
+}
+
+/*  INTRODUCTION  */
+.intro {
+  width: 100%;
+  position: relative;
+}
+
+.back-img img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.marvel-img {
+  position: absolute;
+  max-width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+}
+
+.marvel-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* FILMS CATEGORIES */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.films {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 105px;
+  column-gap: 64px;
+  margin-top: 300px;
+}
+
+.card {
+  padding: 0 12px;
+  border: 1px solid #fff;
+}
+
+.card-top {
+  border-top: 1px solid #fff;
+  margin-top: -50px;
+}
+
+.card-top img {
+  margin-top: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-bottom {
+  padding: 16px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.card-bottom h6 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.pagination {
+  margin: 90px 0;
+  display: flex;
+  gap: 20px;
+  color: #7e7e7e;
+  font-size: 20px;
+  align-items: center;
+  justify-content: end;
+}
+
+.prev-arrow,
+.next-arrow {
+  background: unset;
+  border: none;
+}
+
+.pages {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+}
+
+.pages button {
+  background: unset;
+  border: none;
+  color: #7e7e7e;
+  border-radius: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.pages button.active {
+  color: black;
+  background: #7e7e7e;
+}
+
+:is(.prev-arrow, .next-arrow) i {
+  font-size: 24px;
+  color: #7e7e7e;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .films {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 44px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .films {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .films {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
