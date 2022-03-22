@@ -75,6 +75,7 @@ body {
   line-height: 21px;
 }
 
+/* Pagination */
 .pagination {
   margin: 90px 0;
   display: flex;
@@ -117,6 +118,7 @@ body {
   cursor: pointer;
 }
 
+/* Responsive Design */
 @media only screen and (max-width: 768px) {
   .films {
     grid-template-columns: repeat(3, 1fr);
